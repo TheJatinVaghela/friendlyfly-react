@@ -1,10 +1,24 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import PropTypes from 'prop-types'
 
-function signup(props) {
+function Signup(props) {
+    const fullname= useRef();
+    const username= useRef();
+    const email= useRef();
+    const phone= useRef();
+    const password= useRef();
+
+    function print(e) {
+        e.preventDefault();
+        console.log(fullname.current);
+        console.log(username.current);
+        console.log(email.current);
+        console.log(phone.current);
+        console.log(password.current);
+    }
   return (
     <>
-        <header id="header">
+       <header id="header">
         <div className="header-wrapper">
             <div className="container">
 
@@ -33,17 +47,17 @@ function signup(props) {
 
 
                             <form action="" method="get" className="form">
-                                <input type="text" name="fullname" id="fullname" placeholder="Fullname" required />
-                                <input type="text" name="username" id="username" placeholder="Username" required />
-                                <input type="email" name="email" id="email" placeholder="Email" required />
-                                <input type="tel" name="phone" id="phone" placeholder="Phone No." required />
-                                <input type="password" name="password" className="show-pass" id="password" placeholder="password" required />
+                                <input type="text" name="fullname" ref={fullname} id="fullname" placeholder="Fullname" required />
+                                <input type="text" name="username" ref={username} id="username" placeholder="Username" required />
+                                <input type="email" name="email" ref={email} id="email" placeholder="Email" required />
+                                <input type="tel" name="phone" ref={phone} id="phone" placeholder="Phone No." required />
+                                <input type="password" name="password" ref={password} className="show-pass" id="password" placeholder="password" required />
                                 <span className="sign-pass">
-                                    <i className="fa-solid fa-eye passeye" style={{color: '#000000', cursor: 'pointer'}} id="togglePassword"></i>
+                                    <i className="fa-solid fa-eye passeye" style={{color: '#000000', cursor: 'pointer'}} id="togglePassword" ></i>
                                 </span>
                                
                                 <div className="btn">
-                                    <button type="submit" id="ragister-now">Register Now</button>
+                                    <button type="submit" id="ragister-now" onClick={(e)=>print(e)}>Register Now</button>
                                     <button type="button" id="forgot-pass">Forgot Password</button>
                                 </div>
                             </form>
@@ -82,6 +96,6 @@ function signup(props) {
   )
 }
 
-signup.propTypes = {}
+Signup.propTypes = {}
 
-export default signup
+export default Signup

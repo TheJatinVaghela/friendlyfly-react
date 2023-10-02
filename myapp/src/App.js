@@ -1,11 +1,11 @@
 import logo from './logo.svg';
-import Signin from "./view/signin_signup/signin";
+import Main from './view/main/main'
 import './App.css';
 
 function App() {
   return (
     <>
-        <Signin/>
+        <Main/>
     </>
   );
 }

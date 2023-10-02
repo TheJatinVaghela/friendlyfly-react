@@ -1,6 +1,8 @@
 // for hide and show password
-
-document.getElementById('togglePassword').addEventListener('click', function() {
+console.log("hellow");
+const togglePassword = document.getElementById('togglePassword');
+console.log(togglePassword);
+togglePassword.onclick= function() {
     var passwordInput = document.getElementById('password');
     var icon = this;
 
@@ -13,15 +15,15 @@ document.getElementById('togglePassword').addEventListener('click', function() {
         icon.classList.remove("fa-eye-slash");
         icon.classList.add("fa-eye");
     }
-});
+};
 
  // prevent form submit
-const form = document.querySelector("form");
-form.addEventListener('submit', function (e) {
-e.preventDefault();
-});
+// const form = document.querySelector("form");
+// form.onsubmit = function (e) {
+// e.preventDefault();
+// };
 
 // for new page open on submit
 function cominSoon(){
 window.location.href = 'comingsoonpage.html';
-}
+} 
