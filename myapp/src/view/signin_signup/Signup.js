@@ -2,19 +2,27 @@ import React,{useRef} from 'react'
 import PropTypes from 'prop-types'
 
 function Signup(props) {
-    const fullname= useRef();
-    const username= useRef();
-    const email= useRef();
-    const phone= useRef();
-    const password= useRef();
+    const FULLNAME= useRef();
+    const USERNAME= useRef();
+    const EMAIL= useRef();
+    const PHONE= useRef();
+    const PASSWORD= useRef();
 
     function print(e) {
         e.preventDefault();
-        console.log(fullname.current);
-        console.log(username.current);
-        console.log(email.current);
-        console.log(phone.current);
-        console.log(password.current);
+        const fullname = FULLNAME.current.value;
+        const username = USERNAME.current.value;
+        const email = EMAIL.current.value;
+        const phone = PHONE.current.value;
+        const password = PASSWORD.current.value;
+        
+        
+        // FULLNAME.current.value = "";
+        // USERNAME.current.value = "";
+        // EMAIL.current.value = "";
+        // PHONE.current.value = "";
+        // PASSWORD.current.value = "";
+
     }
   return (
     <>
@@ -47,11 +55,11 @@ function Signup(props) {
 
 
                             <form action="" method="get" className="form">
-                                <input type="text" name="fullname" ref={fullname} id="fullname" placeholder="Fullname" required />
-                                <input type="text" name="username" ref={username} id="username" placeholder="Username" required />
-                                <input type="email" name="email" ref={email} id="email" placeholder="Email" required />
-                                <input type="tel" name="phone" ref={phone} id="phone" placeholder="Phone No." required />
-                                <input type="password" name="password" ref={password} className="show-pass" id="password" placeholder="password" required />
+                                <input type="text" name="fullname" ref={FULLNAME} id="fullname" placeholder="Fullname" required />
+                                <input type="text" name="username" ref={USERNAME} id="username" placeholder="Username" required />
+                                <input type="email" name="email" ref={EMAIL} id="email" placeholder="Email" required />
+                                <input type="tel" name="phone" ref={PHONE} id="phone" placeholder="Phone No." required />
+                                <input type="password" name="password" ref={PASSWORD} className="show-pass" id="password" placeholder="password" required />
                                 <span className="sign-pass">
                                     <i className="fa-solid fa-eye passeye" style={{color: '#000000', cursor: 'pointer'}} id="togglePassword" ></i>
                                 </span>
