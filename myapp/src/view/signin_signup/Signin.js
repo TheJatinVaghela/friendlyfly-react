@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet, Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 function signin(props) {
@@ -59,7 +60,7 @@ function signin(props) {
                             </div>
 
                             <h4>
-                                New here? Register <a href="signup.html">Sign Up</a>
+                                New here? Register <Link to="/">Sign Up</Link>
                             </h4>
 
                         </div>
@@ -68,6 +69,7 @@ function signin(props) {
             </div>
         </div>
     </header>
+    <Outlet/>
     </>
   )
 }

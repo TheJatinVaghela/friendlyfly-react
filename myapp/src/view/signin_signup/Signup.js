@@ -1,4 +1,5 @@
 import React,{useRef} from 'react'
+import { Outlet, Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 function Signup(props) {
@@ -86,7 +87,7 @@ function Signup(props) {
                             </div>
 
                             <h4>
-                                Alredy have an account Login <a href="signIn.html"> Sign In</a>
+                                Alredy have an account Login <Link to="/SignIn"> Sign In</Link>
                             </h4>
 
                         </div>
@@ -100,6 +101,7 @@ function Signup(props) {
             </div>
         </div>
     </header>
+    <Outlet/>
     </>
   )
 }
