@@ -17,12 +17,6 @@ togglePassword.onclick= function() {
     }
 };
 
- // prevent form submit
-// const form = document.querySelector("form");
-// form.onsubmit = function (e) {
-// e.preventDefault();
-// };
-
 // for new page open on submit
 function cominSoon(){
 window.location.href = 'comingsoonpage.html';

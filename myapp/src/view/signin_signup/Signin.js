@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import { Outlet, Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 
-function signin(props) {
+function Signin(props) {
+    const EMAIL = useRef();
+    const PASSWORD = useRef();
+    function getSignInDetails(e) {
+        e.preventDefault();
+        const email = EMAIL.current.value; 
+        const password = PASSWORD.current.value; 
+        console.log(email, password);
+        EMAIL.current.value = "";
+        PASSWORD.current.value = "";
+    }
   return (
     <>
         <header id="header">
@@ -34,13 +44,13 @@ function signin(props) {
 
 
                             <form action="" method="get" className="form" onsubmit="cominSoon()">
-                                <input type="email" name="email" id="email" placeholder="Email/Number/Username" required />
-                                <input type="password" name="password" className="show-pass" id="password" placeholder="password" required />
+                                <input type="email" name="email" ref={EMAIL} id="email" placeholder="Email/Number/Username" required />
+                                <input type="password" name="password" ref={PASSWORD} className="show-pass" id="password" placeholder="password" required />
                                 <span className="sign-pass">
                                     <i className="fa-solid fa-eye passeye" style={{color: '#000000', cursor: 'pointer'}} id="togglePassword"></i>
                                 </span>
                                 <div className="btn" >
-                                    <button type="submit" id="login">Log In</button>
+                                    <button type="submit" id="login" onClick={(e)=>{getSignInDetails(e)}}>Log In</button>
                                     <button type="button" id="forgot-pass">Forgot Password?</button>
                                 </div>
                             </form>
@@ -60,7 +70,7 @@ function signin(props) {
                             </div>
 
                             <h4>
-                                New here? Register <Link to="/">Sign Up</Link>
+                                New here? Register <Link to="/signup">Sign Up</Link>
                             </h4>
 
                         </div>
@@ -74,6 +84,6 @@ function signin(props) {
   )
 }
 
-signin.propTypes = {}
+Signin.propTypes = {}
 
-export default signin
+export default Signin

@@ -1,22 +1,23 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import PropTypes from 'prop-types'
 
-function commingsoon(props) {
+function Commingsoon(props) {
 
     // Set the date and time for the countdown (48 hours from now)
     const countdownDate = new Date();
     countdownDate.setHours(countdownDate.getHours() + 48);
 
     // Update the countdown every second
-    const countdownElement = document.getElementById('countdown');
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    const countdownElement = document.querySelector("#countdown");
+    console.log(countdownElement);
+    // const countdownInterval = setInterval(updateCountdown, 1000);
 
     function updateCountdown() {
         const now = new Date().getTime();
         const distance = countdownDate - now;
 
         if (distance <= 0) {
-            clearInterval(countdownInterval);
+            // clearInterval(countdownInterval);
             countdownElement.innerHTML = "The event has started!";// 24//
         } else {
             const hours = Math.floor((distance % (1000 * 60 * 60 * 56)) / (1000 * 60 * 60));
@@ -31,7 +32,7 @@ function commingsoon(props) {
     }
 
     // Initial call to update the countdown
-    updateCountdown();
+    // updateCountdown();
   return (
     <>
 
@@ -46,6 +47,6 @@ function commingsoon(props) {
   )
 }
 
-commingsoon.propTypes = {}
+Commingsoon.propTypes = {}
 
-export default commingsoon
+export default Commingsoon

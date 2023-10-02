@@ -1,17 +1,16 @@
 import React from 'react'
-import { Outlet, Link } from "react-router-dom";
 import Signup from '../signin_signup/Signup'
 import PropTypes from 'prop-types'
 
-function main(props) {
+function Main(props) {
   return (
     <>
         <Signup/>
-        <Outlet />
+    
     </>
   )
 }
 
-main.propTypes = {}
+Main.propTypes = {}
 
-export default main
+export default Main

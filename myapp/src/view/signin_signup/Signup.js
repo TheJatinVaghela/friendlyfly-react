@@ -10,19 +10,19 @@ function Signup(props) {
     const PASSWORD= useRef();
 
     function print(e) {
+        // console.log(e);
         e.preventDefault();
-        const fullname = FULLNAME.current.value;
-        const username = USERNAME.current.value;
-        const email = EMAIL.current.value;
-        const phone = PHONE.current.value;
-        const password = PASSWORD.current.value;
+         const fullname = FULLNAME.current.value;
+         const username = USERNAME.current.value;
+         const email = EMAIL.current.value;
+         const phone = PHONE.current.value;
+         const password = PASSWORD.current.value;
         
-        
-        // FULLNAME.current.value = "";
-        // USERNAME.current.value = "";
-        // EMAIL.current.value = "";
-        // PHONE.current.value = "";
-        // PASSWORD.current.value = "";
+         FULLNAME.current.value = "";
+         USERNAME.current.value = "";
+         EMAIL.current.value = "";
+         PHONE.current.value = "";
+         PASSWORD.current.value = "";
 
     }
   return (
@@ -55,7 +55,7 @@ function Signup(props) {
                             {/* <!-- Form starts Here  --> */}
 
 
-                            <form action="" method="get" className="form">
+                            <form action="" method="" className="form">
                                 <input type="text" name="fullname" ref={FULLNAME} id="fullname" placeholder="Fullname" required />
                                 <input type="text" name="username" ref={USERNAME} id="username" placeholder="Username" required />
                                 <input type="email" name="email" ref={EMAIL} id="email" placeholder="Email" required />
@@ -66,7 +66,7 @@ function Signup(props) {
                                 </span>
                                
                                 <div className="btn">
-                                    <button type="submit" id="ragister-now" onClick={(e)=>print(e)}>Register Now</button>
+                                    <button type="submit" id="ragister-now" onClick={(e)=>{print(e)}}>Register Now</button>
                                     <button type="button" id="forgot-pass">Forgot Password</button>
                                 </div>
                             </form>
@@ -87,7 +87,7 @@ function Signup(props) {
                             </div>
 
                             <h4>
-                                Alredy have an account Login <Link to="/SignIn"> Sign In</Link>
+                                Alredy have an account Login <Link to="/signin"> Sign In</Link>
                             </h4>
 
                         </div>
