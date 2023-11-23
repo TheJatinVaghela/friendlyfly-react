@@ -99,3 +99,12 @@ input:focus-within
     color: rgb(255 255 255 / 48%);
     font-weight: 100;
 }
+
+/* ---------------------- left Aside-------------- */
+aside.leftAside {
+    display: grid;
+    position: fixed;
+    margin-block: calc(100% - 70%);
+    margin-left: calc(100% - 95%);
+    z-index: var(--highest-z-index--);
+}
