@@ -1,5 +1,6 @@
 .topNav{
     width: 100vw;
+    min-height: clamp(5rem , 5rem + 1vw , 5rem);
     background-color: var(--main-blue--);
     position: fixed;
     top: 0%;
@@ -12,6 +13,7 @@
      color: var(--white-text--);
      font-size: clamp(.5rem , .5rem + 2vw , 3rem);
      overflow: hidden;
+     padding: clamp(.1rem , .5rem , 1rem);
 }
 .topNav .top-first{
     /* border-right: 2px solid red; */
@@ -33,11 +35,10 @@
     border-radius: calc(100% - 95%);
     font-size: clamp(.5rem , .5rem + 2vw , 3rem);
 }
-.topNav .top-first .top-first-input-wrapper input{
+.search-input{
     background-color: transparent;
     border: none;
     width: 100%;
-    font-size: clamp(.5rem , .5rem + 2vw , 3rem);
     color: var(--white-text--);
 }
 input:focus,
@@ -74,7 +75,9 @@ input:focus-within
     border-radius: calc(100% - 95%);
     margin-inline: clamp(.2rem , .2rem + .5vw , .3rem);
 }
-
+.usernotification span{
+    background-color: red;
+}
 .userprofile{
     display: grid;
     align-items: center;
@@ -83,7 +86,7 @@ input:focus-within
     font-size: clamp(.2rem , .2rem + 1vw , 1rem);
 }
 .userProfilePic-wrapper{
-    width: 70%;
+    width: 65%;
     padding: clamp(.1rem , .1rem , .5rem);
 }
 .userProfilePic{
@@ -101,10 +104,76 @@ input:focus-within
 }
 
 /* ---------------------- left Aside-------------- */
-aside.leftAside {
+.leftAside {
     display: grid;
     position: fixed;
-    margin-block: calc(100% - 70%);
-    margin-left: calc(100% - 95%);
-    z-index: var(--highest-z-index--);
+    top: 0%;
+    margin-block: clamp(5% , 8% + 2vh , 15%);
+    margin-left: calc(100% - 98%);
+    z-index: 99;
+    height: 80vh;
+    background-color: var(--main-blue--);
+    border-radius: clamp(2px , 2px + 2vw , 5px);
+    /* overflow: hidden; */
+    width: clamp(2rem , 2rem + 2vw , 5rem);
+    align-content: space-around;
+    align-items: center;
+    grid-template-rows: 1fr 5fr 1fr;
 }
+.leftAside-second {
+    display: grid;
+    /* grid-auto-rows: 1fr; */
+    grid-auto-rows: 1fr;
+    border-top: .1rem solid white;
+    height: 100%;
+    width: 80%;
+    /* align-self: center; */
+    justify-self: center;
+    padding-block: clamp(.1rem , .1rem + 2vw , 2.5rem);
+    border-bottom: .1rem solid white;
+    justify-items: center;
+    list-style: none;
+}
+.leftAside-second li{
+    width: 75%;
+    height: 75%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: clamp(2px , 2px + 2vw , 5px);
+    background-color: rgb(255 255 255 / 28%);
+    
+}
+.hover-showName{
+    position: relative;
+}
+a.hover-showName:hover::after{
+    top: -65%;
+    right: -100%;
+}
+
+.leftMenuClose:hover::after{  content:"❌"  }
+.newsfeed:hover::after{  content:"newsfeed"  }
+.favrate:hover::after{  content:"favrate"  }
+.groupes:hover::after{  content:"groupes"  }
+.music:hover::after{  content:"music"  }
+.weather:hover::after{  content:"weather"  }
+.events:hover::after{  content:"events"  }
+.signout:hover::after{  content:"signout"  }
+.hover-showName:hover::after{
+    /* content: "Name"; */
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: clamp(.1rem , .2rem + 1vw , 1rem);
+    border-radius: clamp(1px , 3px + 1vw , 7px);
+    background-color: rgb(255 255 255);
+    color: black;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    right: -200%;
+    filter: drop-shadow(0px 0px 4px);
+    z-index: 100;
+}
+

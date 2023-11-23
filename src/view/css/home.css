@@ -1,5 +1,5 @@
 :root{
-    --white-body-bg-- :  #afe8ff;
+    --white-body-bg-- :  #ffffff;
     --black-body-bg-- :  #28353a;
     --highest-z-index-- : 100;
     --main-blue--:#0389c9;
@@ -26,6 +26,10 @@ body{
     font-family: "Montserrat", sans-serif, "Roboto", sans-serif;
 }
 
+::placeholder{
+    color:var(--white-text--);
+}
+
 .a-svg,
 .a-img{
     display: grid;
@@ -39,19 +43,31 @@ svg,img{
     width: calc(100% - 15%);
 
 }
+svg{
+    width: clamp(20px , 10px + 2vw , 40px);
+}
 .success {
     position: absolute;
-    top: calc(100% - 92%);
+    top: calc(100% - 88%);
     right: calc(100% - 80%);
     font-size: clamp(.1rem , .5rem + 1vw , 1rem);
-    border-radius: 51%;
+    border-radius: 50%;
     background-color: #5cff5c;
-    display: block;
-    /* width: 3%; */
-    text-align: center;
+    /* display: block; */
+    width: 33%;
+    /* text-align: start; */
     padding: clamp(.2rem , .2rem + 1vw , .3rem);
-    /* height: 5%; */
+    height: 31%;
+    display: flex;
     /* color: white; */
+    line-height: .5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.small-text{
+    font-size: 1ch;
+    text-wrap: nowrap;
 }
 
 @media screen and (width <= 760px) {
@@ -60,6 +76,10 @@ svg,img{
     }
     .topNav .top-second .hamburgerMenu{
         display: grid;
+    }
+    #root .leftAside{
+        top: -100%;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 }
 @media screen and (width <= 576px) {
