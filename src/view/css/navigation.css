@@ -14,7 +14,7 @@
      overflow: hidden;
 }
 .topNav .top-first{
-    border-right: 2px solid red;
+    /* border-right: 2px solid red; */
     overflow: hidden;
     display: grid;
     grid-template-columns: 3fr 2fr 1fr 1fr;
