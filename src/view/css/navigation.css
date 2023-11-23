@@ -1,0 +1,101 @@
+.topNav{
+    width: 100vw;
+    background-color: var(--main-blue--);
+    position: fixed;
+    top: 0%;
+    z-index: var(--highest-z-index--);
+    display: grid;
+    grid-template-columns: 1.3fr 1.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+     ". .";
+     color: var(--white-text--);
+     font-size: clamp(.5rem , .5rem + 2vw , 3rem);
+     overflow: hidden;
+}
+.topNav .top-first{
+    border-right: 2px solid red;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+    gap: 0%;
+}
+
+.topNav .top-first .top-first-input-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: .2rem;
+    background-color: rgb(255 255 255 / 28%);
+    padding: calc(100% - 95%);
+    overflow: hidden;
+    align-items: center;
+    margin-block: calc(100% - 95%);
+    border-radius: calc(100% - 95%);
+    font-size: clamp(.5rem , .5rem + 2vw , 3rem);
+}
+.topNav .top-first .top-first-input-wrapper input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: clamp(.5rem , .5rem + 2vw , 3rem);
+    color: var(--white-text--);
+}
+input:focus,
+input:focus-visible,
+input:focus-within
+{
+    outline: none;
+}
+.top-second{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 3fr;
+    gap: 0%;
+    overflow: hidden;
+}
+.totalPost,
+.totalFriends{
+    display: none;
+}
+.hamburgerMenu{
+    display: none;
+}
+.totalFriends,
+.totalPost {
+    /* display: grid; */
+    font-size: clamp(.1rem , .5rem + 1vw , 2rem);
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    gap: .2rem;
+    background-color: rgb(255 255 255 / 28%);
+    padding: calc(100% - 95%);
+    margin-block: calc(100% - 92%);
+    border-radius: calc(100% - 95%);
+    margin-inline: clamp(.2rem , .2rem + .5vw , .3rem);
+}
+
+.userprofile{
+    display: grid;
+    align-items: center;
+    /* justify-items: center; */
+    grid-template-columns: 1fr 2fr;
+    font-size: clamp(.2rem , .2rem + 1vw , 1rem);
+}
+.userProfilePic-wrapper{
+    width: 70%;
+    padding: clamp(.1rem , .1rem , .5rem);
+}
+.userProfilePic{
+    width: 100%;
+    height: 70%;
+    border-radius: 70%;
+}
+.userProfileName-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.userProfileStatus{
+    color: rgb(255 255 255 / 48%);
+    font-weight: 100;
+}
