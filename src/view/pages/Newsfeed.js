@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 function Newsfeed(props) {
 
+
+
   return (
     <section className='newsfeed-section'>
         <section className='stories'>
@@ -14,6 +16,16 @@ function Newsfeed(props) {
                     <span>Add Stories</span>
                 </div>
             </div>
+           
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
+            <Stories/>
             <Stories/>
         </section>
         <section className='newsfeed-main'>
@@ -30,9 +42,9 @@ function Newsfeed(props) {
 Newsfeed.propTypes = {}
 
 function Stories(params) {
-  
+
   return(
-    <div className='otherUserStorie-1 story-style'>
+    <div className='otherUserStorie-1 story-style' onDragCapture={(e)=>console.log(e)}>
       <div className='followings-stories-overlay story-wrapper-style'
       style={{
         "background": "-webkit-gradient(linear, left bottom, left top, from(#e18d1e), to(rgba(0, 212, 255, 0)))", 
