@@ -40,7 +40,7 @@ body{
 }
 svg,img{
     
-    width: calc(100% - 15%);
+    width: calc(100% - 30%);
 
 }
 svg{
@@ -69,7 +69,37 @@ svg{
     font-size: 1ch;
     text-wrap: nowrap;
 }
+.story-style {
+    /* border: .2rem solid blue; */
+    border-radius: clamp(2px , 2px + 1rem , 5px);
+    margin-inline: clamp(.1rem , .2rem + 1vw , .5rem);
+    /* width: clamp(clamp(15% , 15% - .5rem , 30%) , clamp(20% , 20% - 1rem , 30%) + 2vw , 40%); */
+    width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
+    min-width: clamp(15% , 15% , 25%);
+}
+.story-wrapper-style{
+    background: #cda300;
+    width: clamp(80% , 80% + 2vh , 100%);
+    height: 100%;
+    border-radius: clamp(1px , 5px + 1rem , 10px);
+}
 
+@media screen and (orientation: portrait), screen and (aspect-ratio: 1/1){
+    .stories .story-style{
+        width: clamp(clamp(40% , 18% - .5rem , 30%) , clamp(22% , 22% - 1rem , 30%) + 2vw , 40%);
+        min-width: clamp(30% , 30% , 40%);
+    }
+}
+@media (orientation: landscape) and (max-aspect-ratio: 16/9) {
+    .stories .story-style{
+        width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
+        min-width: clamp(15% , 15% , 25%);
+    }
+    #root .newsfeed-section{
+        grid-template-rows: clamp(15vh, 21vh , 40vh) 5fr;
+    }
+  }
+  
 @media screen and (width <= 760px) {
     .topNav .top-second{
         grid-template-columns:1fr 1fr 1fr 1fr 2fr;
@@ -80,6 +110,14 @@ svg{
     #root .leftAside{
         top: -100%;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    #root .newsfeed-section{
+        grid-template-rows: 1.5fr 5fr;
+        width: 100vw;
+        margin-inline:0%;
+    }
+    .newsfeed-section .newsfeed-main{
+        grid-template-columns: 1fr clamp(50%, 50% + 2vw , 70%) 1fr;
     }
 }
 @media screen and (width <= 576px) {
@@ -95,6 +133,12 @@ svg{
     }
     .topNav .top-second .userprofile{
         display: none;
+    }
+    #root .newsfeed-section{
+        grid-template-rows: 1.3fr 5fr;
+    }
+    .newsfeed-section .newsfeed-main{
+        grid-template-columns: 0fr 1fr 0fr;
     }
 }
 @media screen and (width >= 1200px) {

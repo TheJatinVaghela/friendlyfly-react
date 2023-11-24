@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 // import App from './App';
 import './view/css/home.css';
 import './view/css/navigation.css';
+import './view/css/newsfeed.css';
 import Home from "./view/pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

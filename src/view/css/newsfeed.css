@@ -1,0 +1,68 @@
+.newsfeed-section {
+    display: grid;
+    /* grid-template-columns: 1fr 5fr; */
+    grid-template-rows: 1.9fr 5fr;
+    /* border: .1rem solid red; */
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    /* margin-inline: clamp(8% , 8% + 2vw , 10%); */
+    margin-top: clamp(2% , 2% + 2vw , 10%);
+}
+.stories{
+    border-bottom: .1rem solid red;
+}
+.newsfeed-main{
+    display: grid;
+    /* grid-auto-columns: 1fr; */
+    grid-template-columns: 1fr clamp(40%, 40% + 2vw , 70%) 1fr;
+}
+.newsfeed-main-mid{
+    border-inline: .1rem solid green;
+}
+
+/* ----- stories ------ */
+.stories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.add-story {
+    /* background-color: gray; */
+    border: 2px solid rgba(20, 106, 160, 0.427);
+    display: flex;
+    justify-content: center;
+    margin-inline: 0%;
+    padding-block: clamp(.2rem , .2rem + 1vw , clamp(.2rem , .2rem , .5rem));
+    margin-right: clamp(2px , 2px + 1vw , .5rem);
+}
+.otherUserStorie-1{
+    /* background-color: red; */
+}
+.addStory-wrapper {
+    display: flex;
+    background-color: #61b0fd;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(.5rem , .5rem + 2vw , 1rem);
+    font-weight: 700;
+    color: var(--white-text--);
+}
+.addStory-wrapper > div{
+    border: 2px solid white;
+    width: 45%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-blue--);
+    border-radius: 100%;
+    margin-bottom: clamp(5%, 5% + 1vw , 10%);
+}
+.addStory-wrapper > div > img {
+    width: clamp(.1rem , .5rem + 1vw , 1rem);
+}

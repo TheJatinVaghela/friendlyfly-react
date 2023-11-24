@@ -2,7 +2,7 @@
     width: 100vw;
     min-height: clamp(5rem , 5rem + 1vw , 5rem);
     background-color: var(--main-blue--);
-    position: fixed;
+    position: sticky;
     top: 0%;
     z-index: var(--highest-z-index--);
     display: grid;
