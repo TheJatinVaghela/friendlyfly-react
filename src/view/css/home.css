@@ -46,6 +46,7 @@ svg,img{
 svg{
     width: clamp(20px , 10px + 2vw , 40px);
 }
+.circular--square { border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; }
 .success {
     position: absolute;
     top: calc(100% - 88%);
@@ -71,7 +72,7 @@ svg{
 }
 .story-style {
     /* border: .2rem solid blue; */
-    border-radius: clamp(2px , 2px + 1rem , 5px);
+    border-radius: clamp(5px , 6px + 1rem , 16px);
     margin-inline: clamp(.1rem , .2rem + 1vw , .5rem);
     /* width: clamp(clamp(15% , 15% - .5rem , 30%) , clamp(20% , 20% - 1rem , 30%) + 2vw , 40%); */
     width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
@@ -111,6 +112,14 @@ svg{
     left: 0%;
     z-index: 1;
 }
+.newsfeed-main-left-commone-style {
+    display: flex;
+    position: relative;
+    background-color: #cacaff;
+    width: 100%;
+    height: clamp(10rem , 10rem + 10vw , 50%);
+    border-radius: clamp(5px , 5px , 15px);
+}
 @media screen and (orientation: portrait), screen and (aspect-ratio: 1/1){
     .stories .story-style{
         width: clamp(clamp(40% , 18% - .5rem , 30%) , clamp(22% , 22% - 1rem , 30%) + 2vw , 40%);
@@ -119,11 +128,13 @@ svg{
 }
 @media (orientation: landscape) and (max-aspect-ratio: 16/9) {
     .stories .story-style{
-        width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
-        min-width: clamp(15% , 15% , 25%);
+        /* width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
+        min-width: clamp(15% , 15% , 25%); */
+        max-width: 30%;
+        min-width: 25%;
     }
     #root .newsfeed-section{
-        grid-template-rows: clamp(15vh, 21vh , 40vh) 5fr;
+        grid-template-rows: minmax(15rem , 30vh);
     }
   }
   
@@ -139,12 +150,12 @@ svg{
         transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     #root .newsfeed-section{
-        grid-template-rows: 1.5fr 5fr;
+        /* grid-template-rows: 1.5fr 5fr; */
         width: 100vw;
         margin-inline:0%;
     }
     .newsfeed-section .newsfeed-main{
-        grid-template-columns: 1fr clamp(50%, 50% + 2vw , 70%) 1fr;
+        grid-template-columns: clamp(8rem , 10rem + 2vw , 14rem) 5fr clamp(8rem , 10rem + 2vw , 14rem);
     }
 }
 @media screen and (width <= 576px) {
@@ -162,7 +173,7 @@ svg{
         display: none;
     }
     #root .newsfeed-section{
-        grid-template-rows: 1.3fr 5fr;
+        /* grid-template-rows: minmax(7rem , 25%); */
     }
     .newsfeed-section .newsfeed-main{
         grid-template-columns: 0fr 1fr 0fr;
@@ -180,3 +191,13 @@ svg{
         display: grid;
     }
 }
+@media screen and (width <= 1070px) and (width > 760px) {
+    .newsfeed-section .newsfeed-main{
+        grid-template-columns: clamp(10rem , 10rem + 2vw , 18rem) calc((100% - clamp(10rem , 10rem + 2vw , 18rem)) - clamp(10rem , 10rem + 2vw , 18rem) ) clamp(10rem , 10rem + 2vw , 18rem);
+    }
+}
+@media screen and (width >= 1440px){
+    .newsfeed-section .newsfeed-main {
+        grid-template-columns: clamp(20rem , 25rem + 2vw , 38rem) calc((100% - clamp(20rem , 25rem + 2vw , 38rem)) - clamp(20rem , 25rem + 2vw , 38rem) ) clamp(20rem , 25rem + 2vw , 38rem);
+    }
+} 
