@@ -103,15 +103,61 @@ function NewsfeedMainLeft(props) {
               <span>followers</span>
             </div>
           </div>
-          <div className='Populer_sugggetion_5'></div>
+          <div className='Populer_sugggetion_5'>
+            <button>View Profile</button>
+          </div>
       </div>
 
       <div className='friend_suggetion'>
-
+        <div className='friend_suggetion_1'>
+          <h2>Friend Suggestion</h2>
+          <a href="#" class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw icon icon-theme stroke-width-3 iw-11 ih-11"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+          </a>
+          <a href="#" class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun icon icon-theme stroke-width-3 iw-11 ih-11"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> 
+          </a>
+        </div>
+        <div className='friend_suggetion_2'>
+          <Stories/>
+          <Stories/>
+          <Stories/>
+          <Stories/>
+        </div>
       </div>
 
       <div className='liked_pages'>
-
+        <div className='liked_pages_1'>
+            <h2>liked Suggestion</h2>
+            <a href="#" class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw icon icon-theme stroke-width-3 iw-11 ih-11"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            </a>
+            <a href="#" class="d-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun icon icon-theme stroke-width-3 iw-11 ih-11"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> 
+            </a>
+        </div>
+        <div className='liked_pages_2 likedPage_1'>
+          <div className='likedPage_2_1'
+            style={{
+              "background-image": "url(https://themes.pixelstrap.com/friendbook/assets/images/pages-logo/1.jpg)",
+              "background-size": "cover",
+              "background-position": "center center",
+              "background-repeat":" no-repeat",
+              "display": "flex",
+              "width": "5rem",
+              "height": "5rem",
+              "border-radius":"100%",
+              "border": "2px solid black"
+            }}
+          ></div>
+          <div className='likedPage_2_2'>
+            <h2>Chrimson Agency</h2>
+            <span>Clothing Store</span>
+          </div>
+          <div className='likedPage_2_3'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star icon-dark iw-14 ih-14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+        </div>
       </div>
     </div>
   )

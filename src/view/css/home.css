@@ -134,7 +134,7 @@ svg{
         min-width: 25%;
     }
     #root .newsfeed-section{
-        grid-template-rows: minmax(15rem , 30vh);
+        grid-template-rows:minmax(15rem , 30vh);
     }
   }
   
@@ -173,7 +173,7 @@ svg{
         display: none;
     }
     #root .newsfeed-section{
-        /* grid-template-rows: minmax(7rem , 25%); */
+        grid-template-rows:minmax(11rem, 20rem);
     }
     .newsfeed-section .newsfeed-main{
         grid-template-columns: 0fr 1fr 0fr;
