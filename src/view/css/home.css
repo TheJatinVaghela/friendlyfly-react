@@ -71,28 +71,24 @@ svg{
     text-wrap: nowrap;
 }
 .story-style {
-    /* border: .2rem solid blue; */
     border-radius: clamp(5px , 6px + 1rem , 16px);
-    margin-inline: clamp(.1rem , .2rem + 1vw , .5rem);
-    /* width: clamp(clamp(15% , 15% - .5rem , 30%) , clamp(20% , 20% - 1rem , 30%) + 2vw , 40%); */
-    width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
-    min-width: clamp(15% , 15% , 25%);
     position: relative;
-    background-color: white;
+    background-color: orange;
     display: flex;
-    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(0, 0, 0, 0.22) 0px 1px 5px;
 }
 .story-wrapper-style{
     background: orange ;
-    width: clamp(80% , 80% + 2vh , 100%);
+    width: 100%;
     height: 100%;
     border-radius: clamp(1px , 5px + 1rem , 10px);
+    /* padding-inline: clamp(1rem , 1rem + 2vw, 10rem); */
 }
 .followings-stories{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    display: block;
+    /* display: block; */
     -webkit-backdrop-filter: blur(105px) drop-shadow(black 2px 4px 6px);
     /* backdrop-filter: blur(105px) drop-shadow(black 2px 4px 6px); */
     background-blend-mode: overlay;
@@ -125,8 +121,8 @@ svg{
 }
 @media screen and (orientation: portrait), screen and (aspect-ratio: 1/1){
     .stories .story-style{
-        width: clamp(clamp(40% , 18% - .5rem , 30%) , clamp(22% , 22% - 1rem , 30%) + 2vw , 40%);
-        min-width: clamp(30% , 30% , 40%);
+        /* width: clamp(clamp(40% , 18% - .5rem , 30%) , clamp(22% , 22% - 1rem , 30%) + 2vw , 40%);
+        min-width: clamp(30% , 30% , 40%); */
     }
 }
 @media (orientation: landscape) and (max-aspect-ratio: 16/9) {
@@ -135,11 +131,11 @@ svg{
         min-width: clamp(15% , 15% , 25%); */
         /* max-width: 30%;
         min-width: 25%; */
-        max-width: 30%;
-        min-width: clamp(10% , 10% + 2vh , 15%);
+        /* max-width: 30%;
+        min-width: clamp(10% , 10% + 2vh , 15%); */
     }
     #root .newsfeed-section{
-        grid-template-rows: minmax(10rem , 10vh);
+        /* grid-template-rows: minmax(10rem , 15vh);; */
     }
   }
   
@@ -178,7 +174,7 @@ svg{
         display: none;
     }
     #root .newsfeed-section{
-        grid-template-rows: minmax(8rem, 10vh);
+        /* grid-template-rows: minmax(8rem, 10vh); */
     }
     .newsfeed-section .newsfeed-main{
         grid-template-columns: 0fr 1fr 0fr;

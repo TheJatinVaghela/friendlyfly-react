@@ -1,7 +1,7 @@
 .newsfeed-section {
     display: grid;
     /* grid-template-columns: 1fr 5fr; */
-    grid-template-rows:minmax(15rem , 30vh);
+    grid-template-rows: minmax(clamp(15rem , 11rem + 2vw , 20rem), clamp(15vw , 10vw + 2vw , 25vw));
     /* border: .1rem solid red; */
     width: 90%;
     height: 100vh;
@@ -26,11 +26,14 @@
 
 /* ----- stories ------ */
 .stories{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
     overflow-x: auto;
     overflow-y: hidden;
+    grid-auto-flow: column;
+    grid-auto-columns:minmax(clamp(10rem , 8rem + 3vw , 15rem), clamp(15vw , 10vw + 2vw , 25vw));
+    grid-column-gap: 1vw;
 }
 .add-story {
     /* background-color: gray; */
@@ -63,7 +66,7 @@
 .addStory-wrapper > div{
     border: 2px solid white;
     width: 45%;
-    height: 40%;
+    height: 35%;
     display: flex;
     flex-direction: row;
     justify-content: center;
