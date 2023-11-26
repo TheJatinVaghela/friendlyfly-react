@@ -144,8 +144,8 @@ function NewsfeedMainLeft(props) {
               "background-position": "center center",
               "background-repeat":" no-repeat",
               "display": "flex",
-              "width": "5rem",
-              "height": "5rem",
+              "width": "50px",
+              "height": "100%",
               "border-radius":"100%",
               "border": "2px solid black"
             }}

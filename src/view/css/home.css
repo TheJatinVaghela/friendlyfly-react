@@ -6,7 +6,7 @@
     --white-text--: white;
 }
 #root{
-    background: transparent;
+    background: #ebebeb;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
@@ -78,6 +78,9 @@ svg{
     width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
     min-width: clamp(15% , 15% , 25%);
     position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
 }
 .story-wrapper-style{
     background: orange ;
@@ -130,11 +133,13 @@ svg{
     .stories .story-style{
         /* width: clamp(clamp(10% , 10% - .5rem , 20%) , clamp(15% , 15% - 1rem , 30%) + 2vw , 40%);
         min-width: clamp(15% , 15% , 25%); */
+        /* max-width: 30%;
+        min-width: 25%; */
         max-width: 30%;
-        min-width: 25%;
+        min-width: clamp(10% , 10% + 2vh , 15%);
     }
     #root .newsfeed-section{
-        grid-template-rows:minmax(15rem , 30vh);
+        grid-template-rows: minmax(10rem , 10vh);
     }
   }
   
@@ -173,7 +178,7 @@ svg{
         display: none;
     }
     #root .newsfeed-section{
-        grid-template-rows:minmax(11rem, 20rem);
+        grid-template-rows: minmax(8rem, 10vh);
     }
     .newsfeed-section .newsfeed-main{
         grid-template-columns: 0fr 1fr 0fr;
