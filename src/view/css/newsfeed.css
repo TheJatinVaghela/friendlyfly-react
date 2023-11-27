@@ -16,7 +16,7 @@
 .newsfeed-main{
     display: grid;
     /* grid-auto-columns: 1fr; */
-    grid-template-columns: clamp(10rem , 10rem + 2vw , 15rem) calc((100% - clamp(10rem , 10rem + 2vw , 15rem)) - clamp(10rem , 10rem + 2vw , 15rem) ) clamp(10rem , 10rem + 2vw , 15rem);
+    grid-template-columns: clamp(15rem , 10rem + 2vw , 15rem) calc((100% - clamp(15rem , 10rem + 2vw , 15rem)) - clamp(15rem , 10rem + 2vw , 15rem) ) clamp(15rem , 10rem + 2vw , 15rem);
     justify-content: center;
 }
 .newsfeed-main-mid{
@@ -96,7 +96,8 @@
     gap: 1rem;
     padding-block: clamp(.5rem , .5rem + 1vh , 1rem);
     /* width: clamp(12rem , 13rem + 2vw , 18rem); */
-    background-color: #444431;
+    background-color: #8772ab;
+    overflow: hidden;
 }
 .Populer_sugggetion {
     min-height: 20rem;
@@ -137,7 +138,8 @@
 }
 .Populer_sugggetion_1 a,
 .friend_suggetion_1 a ,
-.liked_pages_1 a 
+.liked_pages_1 a ,
+.events_1 a
  {
     background-color: #6cddff;
     /* width: 10px; */
@@ -147,6 +149,7 @@
     align-items: center;
     flex-direction: row;
     padding: 0.3rem;
+    max-height: 50px;
 }
 .Populer_sugggetion_2{
     display: flex;
@@ -207,7 +210,8 @@
     border-radius: clamp(5px, 5px + 1vw , 10px);
 }
 .friend_suggetion_1,
-.liked_pages_1
+.liked_pages_1,
+.events_1
 {
     display: flex;
     flex-direction: row;
@@ -215,7 +219,8 @@
     padding-block: clamp(.5rem , .5rem + 1vw , 1rem);
 }
 .friend_suggetion_1 h2, 
-.liked_pages_1 h2 
+.liked_pages_1 h2,
+.events_1 h2 
 {
     width: 100%;
     font-size: clamp(.2rem , .2rem + 1vw , .8rem);
@@ -256,4 +261,76 @@
 }
 .likedPage_2_2 span{
     font-size: clamp(.1rem , .2rem + .5vw , .7rem);
+}
+.events{
+    background-color: white;
+    border-radius: clamp(.2rem , .2rem + 1vw , 1rem);
+    display: flex;
+    flex-direction: column;
+    padding-inline: clamp(.2rem , .5rem + 1vw , .8rem);
+    align-items: center;
+    background-size: cover;
+    /* backdrop-filter: blur(131px); */
+    background-color: #2a8a9c;
+    background-blend-mode: multiply;
+    color: white;
+}
+.events_2 {
+    display: flex;
+    flex-direction: row;
+    padding-block: clamp(.3rem , .5rem + 1vw , 1rem);
+    align-items: center;
+    gap: 15px;
+}
+.events_2 .icon img{
+    height: 20px;
+    width: 20px;
+}
+.events_2 .center-profile{
+    background-image: url(https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.events_1 .Text-wrapper p{
+    font-size: clamp(.2rem , .2rem + 1vw , .8rem);
+}
+.events_3{
+    display: flex;
+    flex-direction: column;
+}
+.events_3 .Text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: clamp(.5rem , .5rem + 1vw , 1rem);
+}
+.events_3 form{
+    padding-block: clamp(.5rem , .5rem + 1vw , 1rem);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.events_3 form input,
+.events_3 form button{
+    border: 2px solid rgb(184, 184, 255);
+    border-radius: 15px;
+    background-color: #626262;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    font-size: clamp(.5rem , .5rem + 1vw , .8rem);
+    padding: clamp(.5rem , .5rem + 1vw , .8rem);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.events_3 form button{
+
+border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

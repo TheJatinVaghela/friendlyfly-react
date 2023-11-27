@@ -131,7 +131,7 @@ input:focus-within
     justify-self: center;
     padding-block: clamp(.1rem , .1rem + 2vw , 2.5rem);
     border-bottom: .1rem solid white;
-    justify-items: center;
+    /* justify-items: center; */
     list-style: none;
 }
 .leftAside-second li{
@@ -158,7 +158,7 @@ a.hover-showName:hover::after{
 .groupes:hover::after{  content:"groupes"  }
 .music:hover::after{  content:"music"  }
 .weather:hover::after{  content:"weather"  }
-.events:hover::after{  content:"events"  }
+.events-op:hover::after{  content:"events"  }
 .signout:hover::after{  content:"signout"  }
 .hover-showName:hover::after{
     /* content: "Name"; */
