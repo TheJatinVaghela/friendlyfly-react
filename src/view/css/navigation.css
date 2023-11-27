@@ -131,7 +131,7 @@ input:focus-within
     justify-self: center;
     padding-block: clamp(.1rem , .1rem + 2vw , 2.5rem);
     border-bottom: .1rem solid white;
-    /* justify-items: center; */
+    justify-items: center;
     list-style: none;
 }
 .leftAside-second li{

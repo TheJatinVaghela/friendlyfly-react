@@ -119,6 +119,15 @@ svg{
     height: clamp(10rem , 10rem + 10vw , 50%);
     border-radius: clamp(5px , 5px , 15px);
 }
+@keyframes EVENTS_ {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+        
+    }
+}
 @media screen and (orientation: portrait), screen and (aspect-ratio: 1/1){
     .stories .story-style{
         /* width: clamp(clamp(40% , 18% - .5rem , 30%) , clamp(22% , 22% - 1rem , 30%) + 2vw , 40%);

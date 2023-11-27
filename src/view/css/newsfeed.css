@@ -282,19 +282,39 @@
     align-items: center;
     gap: 15px;
 }
+.events_2 > div {
+    background-color: #ffffff45;
+    padding: .5rem;
+    border-radius: 100%;
+    
+}
 .events_2 .icon img{
     height: 20px;
     width: 20px;
 }
 .events_2 .center-profile{
-    background-image: url(https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0%;
+}
+.events_2 .center-profile::before{
+    content: "";
+    position: absolute;
+    background-image: radial-gradient(circle, #051937, #004d7a, #008793, rgb(154, 158, 156), #85858550);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    animation: EVENTS_ 1s ease-out 1s infinite alternate none;
+}
+.events_2 .center-profile > img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    align-self: center;
 }
 .events_1 .Text-wrapper p{
     font-size: clamp(.2rem , .2rem + 1vw , .8rem);
@@ -333,4 +353,5 @@ border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    padding: clamp(.1rem , .2rem + 1vw , .4rem);
 }

@@ -194,13 +194,8 @@ function NewsfeedMainRight(props) {
             <div className="icon">
                 <img src="https://themes.pixelstrap.com/friendbook/assets/images/icon/cake.png" className="img-fluid blur-up lazyloaded" alt="cake"/>
             </div>
-            <div className="center-profile bg-size blur-up lazyloaded"
-             style={{"background-image": "url(https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg)",
-                    "background-size":"cover",
-                    "background-position":"center center", 
-                    "background-repeat": "no-repeat" ,
-                    "display": "block"}}>
-                <img src="https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg" className="img-fluid blur-up lazyload bg-img" alt="user" style={{"display": "none"}}/>
+            <div className="center-profile bg-size blur-up lazyloaded">
+                <img src="https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg" className="img-fluid blur-up lazyload bg-img" alt="user" />
             </div>
             <div className="icon">
                 <h5>20+</h5>
