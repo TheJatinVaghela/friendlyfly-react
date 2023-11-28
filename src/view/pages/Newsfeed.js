@@ -91,8 +91,8 @@ function Stories(params) {
       </div>
       <div className='otherUserStorie-1-wrapper story-wrapper-style followings-stories'
       style={{"background-image": "url(https://themes.pixelstrap.com/friendbook/assets/images/story/6.jpg)"}}>
-        <span className='text-prime-white' onMouseDown={()=>{ return false}} onSelect={()=>{ return false}}>User Name</span>
-        <span className='text-prime-white' onMouseDown={()=>{ return false}} onSelect={()=>{ return false}}>Active Now</span>
+        <span className='text-prime-white' onMouseDown={(e)=>{ return false}} onSelect={(e)=>{ return false}}>User Name</span>
+        <span className='text-prime-white' onMouseDown={(e)=>{ return false}} onSelect={(e)=>{ return false}}>Active Now</span>
       </div>
     </div> 
   );
