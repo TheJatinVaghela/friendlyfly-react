@@ -1,16 +1,44 @@
 :root{
-    --white-body-bg-- :  #ffffff;
-    --black-body-bg-- :  #28353a;
+    --white-body-bg-- :  #ebebeb;
+    --black-body-bg-- :  #232e42;
+    --elm-light-bg--:white;
+    --elm-dark-bg--:#112032;
     --highest-z-index-- : 100;
     --main-blue--:#0389c9;
     --white-text--: white;
+    --black-text--: black;
+    --svg-background-color-- : #e8e8e859;
 }
 #root{
-    background: #ebebeb;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     overflow-y:auto;
+}
+.root-light{
+    background: var(--white-body-bg--);
+}
+.root-dark{
+    background: var(--black-body-bg--);
+}
+.light{
+   background: var(--elm-light-bg--);
+}
+.dark{
+   background: var(--elm-dark-bg--);
+}
+.text-white{
+    color:var(--white-text--) !important;
+}
+.text-black{
+    color:var(--black-text--) !important;
+}
+.bg-prime-blue{
+    background-color: var(--main-blue--);
+    color: var(--white-text--);
+}
+.text-prime-white{
+    color: white;
 }
 *,*::after,*::before{
     margin: 0%;
@@ -44,7 +72,8 @@ svg,img{
 
 }
 svg{
-    width: clamp(20px , 10px + 2vw , 40px);
+    width: clamp(5px , 5px + 1vw , 10px);
+    stroke: var(--main-blue--);
 }
 .circular--square { border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; }
 .success {
@@ -155,9 +184,8 @@ svg{
     .topNav .top-second .hamburgerMenu{
         display: grid;
     }
-    #root .leftAside{
+    .leftAside{
         top: -100%;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     #root .newsfeed-section{
         /* grid-template-rows: 1.5fr 5fr; */

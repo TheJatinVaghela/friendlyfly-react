@@ -1,6 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+function toggle_sideMenu(e){
+  const leftAside = document.querySelector(".leftAside");  
+
+
+  if(leftAside.classList[1]==="active"){
+      leftAside.classList.remove("active");
+  }else if(leftAside.classList[1] !== "active"){
+    leftAside.classList.add("active");
+  }
+};
+
 function Navigations(props) {
   return (
     <>
@@ -16,6 +27,39 @@ Navigations.propTypes = {}
 export default Navigations
 
 function topNav(params) {
+  
+  function usermode(){
+    const rootElm = document.querySelector("#root");
+    const lightElm = document.querySelectorAll(".light");
+    const darkElm = document.querySelectorAll(".dark");
+    const textWhiteElm = document.querySelectorAll(".text-white");
+    const textDarkElm = document.querySelectorAll(".text-black");
+    if(rootElm.classList.contains("root-light")){
+      rootElm.classList.remove("root-light");
+      rootElm.classList.add("root-dark");
+      lightElm.forEach((e)=>{
+        e.classList.remove("light");
+        e.classList.add("dark");
+      });
+      textDarkElm.forEach((e)=>{
+        e.classList.remove("text-black");
+        e.classList.add("text-white");
+      });
+    }else if(rootElm.classList.contains("root-dark")){
+      rootElm.classList.remove("root-dark");
+      rootElm.classList.add("root-light");
+      darkElm.forEach((e)=>{
+        e.classList.remove("dark");
+        e.classList.add("light");
+        
+      });
+      textWhiteElm.forEach((e)=>{
+        e.classList.remove("text-white");
+        e.classList.add("text-black");
+      });
+    }
+  }
+
   return (
     <nav className='topNav'>
       <div className='top-first'>
@@ -35,20 +79,20 @@ function topNav(params) {
       </div>
       <div className='top-second'>
         <div className='totalPost'>
-          <span>4556</span>
-          <span className='small-text'>Total Posts</span>
+          <span className='text-prime-white'>4556</span>
+          <span className='small-text text-prime-white'>Total Posts</span>
         </div>
         <div className='totalFriends'>
-          <span>2456</span>
-          <span className='small-text'>Total Friends</span>
+          <span className='text-prime-white'>2456</span>
+          <span className='small-text text-prime-white'>Total Friends</span>
         </div>
         <a class="a-svg userchat" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle icon-light stroke-width-3 iw-16 ih-16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span class="count success">2</span>
         </a>
-        <a class="a-svg daynight" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="a-svg daynight" onClick={(e)=>usermode()} data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon icon-light stroke-width-3 iw-16 ih-16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </a>
-        <a class="a-svg hamburgerMenu" href="">
+        <a class="a-svg hamburgerMenu" onClick={(e)=>toggle_sideMenu(e)}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid icon-light stroke-width-3 iw-16 ih-16"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
         </a>
         <a class="a-svg usernotification" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,8 +103,8 @@ function topNav(params) {
             <img className='userProfilePic' src="https://themes.pixelstrap.com/friendbook/assets/images/user-sm/1.jpg"/>
           </a>
           <h3 className='userProfileName-wrapper'>
-            <span className='userProfileName'>Name</span>
-            <span className='userProfileStatus'>active now</span>
+            <span className='userProfileName text-black'>Name</span>
+            <span className='userProfileStatus text-black'>active now</span>
           </h3>
         </div>
       </div>
@@ -69,14 +113,9 @@ function topNav(params) {
 }
 
 function leftNav(params) {
+ 
   return(
-    <aside className='leftAside'>
-        <div className='leftAside-first'>
-          <a href="#" className='a-svg hover-showName leftMenuClose'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid bar-icon"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          </a>
-        </div>
-
+    <aside className='leftAside '>
       <ul class="leftAside-second ">
               <li className='hover-showName newsfeed'>
                   <a className='a-svg' href="#">

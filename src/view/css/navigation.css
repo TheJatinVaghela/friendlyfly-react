@@ -15,6 +15,9 @@
      overflow: hidden;
      padding: clamp(.1rem , .5rem , 1rem);
 }
+.topNav svg{
+    stroke: white;
+}
 .topNav .top-first{
     /* border-right: 2px solid red; */
     overflow: hidden;
@@ -102,13 +105,15 @@ input:focus-within
     color: rgb(255 255 255 / 48%);
     font-weight: 100;
 }
-
+.topNav svg{
+    width: clamp(15px , 20px + 1vw , 40px);
+}
 /* ---------------------- left Aside-------------- */
 .leftAside {
     display: grid;
     position: fixed;
-    top: 0%;
-    margin-block: clamp(5% , 8% + 2vh , 15%);
+    /* bottom: -10%; */
+    /* margin-block: clamp(5% , 5% + 2vh , 10%); */
     margin-left: calc(100% - 98%);
     z-index: 99;
     height: 80vh;
@@ -118,7 +123,15 @@ input:focus-within
     width: clamp(2rem , 2rem + 2vw , 5rem);
     align-content: space-around;
     align-items: center;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows:5fr 1fr;
+    transition: all 1s ease-out;
+
+}
+.leftAside.active{
+    top: 20%;
+}
+.leftAside svg{
+    stroke: white;
 }
 .leftAside-second {
     display: grid;
