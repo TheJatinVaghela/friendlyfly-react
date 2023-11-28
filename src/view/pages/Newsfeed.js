@@ -50,7 +50,7 @@ function Newsfeed(props) {
                     <div>
                         <img src="https://themes.pixelstrap.com/friendbook/assets/images/icon/plus.png"/>
                     </div>
-                    <span className='text-prime-white'>Add Stories</span>
+                    <span className='text-black'>Add Stories</span>
                 </div>
             </div>
            
@@ -259,8 +259,8 @@ function NewsfeedMainRight(props) {
         >
           <div className='events_1'>
             <div className="Text-wrapper">
-              <h2 className='text-black'>birthday !!!!</h2>
-              <p className='text-black'>today your collge friend's birthday</p>
+              <h2 className='text-prime-white'>birthday !!!!</h2>
+              <p className='text-prime-white'>today your collge friend's birthday</p>
             </div>
             <a href="#" className="d-flex">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-rotate-cw icon icon-theme stroke-width-3 iw-11 ih-11"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
@@ -277,15 +277,15 @@ function NewsfeedMainRight(props) {
                 <img src="https://themes.pixelstrap.com/friendbook/assets/images/user-sm/4.jpg" className="img-fluid blur-up lazyload bg-img" alt="user" />
             </div>
             <div className="icon">
-                <h5 className='text-black'>20+</h5>
+                <h5 className='text-prime-white'>20+</h5>
             </div>
           </div>
           <div className="events_3 details">
             <div className='Text-wrapper'>
-              <h3 className='text-black'>sufiya elija</h3>
-              <h6 className='text-black'>glasgow, scotland</h6>
+              <h3 className='text-prime-white'>sufiya elija</h3>
+              <h6 className='text-prime-white'>glasgow, scotland</h6>
             </div>
-            <p className='text-black'>Lorem 5th Sept 2019 dummy text of the printing and typesetting industry.</p>
+            <p className='text-prime-white'>Lorem 5th Sept 2019 dummy text of the printing and typesetting industry.</p>
             <form>
                 <input type="text" placeholder="wish birthday to your friend" className="form-control" disabled/>
                 <button className="bg-prime-blue text-prime-white" type="submit">
