@@ -147,33 +147,5 @@ input:focus-within
 .hover-showName{
     position: relative;
 }
-a.hover-showName:hover::after{
-    top: -65%;
-    right: -100%;
-}
 
-.leftMenuClose:hover::after{  content:"❌"  }
-.newsfeed:hover::after{  content:"newsfeed"  }
-.favrate:hover::after{  content:"favrate"  }
-.groupes:hover::after{  content:"groupes"  }
-.music:hover::after{  content:"music"  }
-.weather:hover::after{  content:"weather"  }
-.events-op:hover::after{  content:"events"  }
-.signout:hover::after{  content:"signout"  }
-.hover-showName:hover::after{
-    /* content: "Name"; */
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    padding: clamp(.1rem , .2rem + 1vw , 1rem);
-    border-radius: clamp(1px , 3px + 1vw , 7px);
-    background-color: rgb(255 255 255);
-    color: black;
-    display: flex;
-    position: absolute;
-    top: 10%;
-    right: -200%;
-    filter: drop-shadow(0px 0px 4px);
-    z-index: 100;
-}
 
